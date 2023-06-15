@@ -1,0 +1,21 @@
+body {
+    overflow: hidden;
+  }
+  
+  .map-container {
+    width: 1000px;
+    /* height: 700px; */
+    /* margin: 0 auto; */
+    margin-top: -240px;
+    overflow: hidden;
+  }
+  
+  .map-container svg {
+    /* pointer-events: none; */
+    scroll-behavior: none;
+  }
+  
+  .state:hover {
+    fill: yellow;
+  }
+  
