@@ -10,7 +10,8 @@ import Register from './Pages/Register'
 import Login from './Pages/Login'
 import Rem from './Pages/rem'
 import Bank from './Components/ListOfBank'
-import Mod from './Components/liquidation/Mods'
+import Mods from './Components/liquidation/Mods'
+import Mod from './Components/liquidation/Mod'
 
 function App() {
 
@@ -62,8 +63,23 @@ function App() {
             path="/Liquidation-pocess"
             element={
               <div>
-                <Nav/>
-                <Navi/> 
+                <Nav />
+                <Navi />
+                <br />
+                <br />
+                <br />
+                <br />
+                <Mods/>
+              </div>
+            }
+          />
+
+          <Route
+            path="/Liquidation-List"
+            element={
+              <div>
+                <Nav />
+                <Navi />
                 <br />
                 <br />
                 <br />

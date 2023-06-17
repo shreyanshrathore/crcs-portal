@@ -22,6 +22,11 @@ const Navi = () => {
         console.log("Maps");
         navigate('/Liquidation-pocess');
       };
+
+      const goLiqList = () => {
+        console.log("Maps");
+        navigate('/Liquidation-List');
+      };
     const goHome = () => {
         console.log("clicked");
         navigate('/home');
@@ -173,7 +178,7 @@ const Navi = () => {
                         <ul className="List one">
                             <ListItem title="RECEIVED APPLICATION" >                               
                             </ListItem>
-                            <ListItem title="STATUS OF APPLICATION" >
+                            <ListItem title="STATUS OF APPLICATION" onClick = {goLiqList}>
 
                             </ListItem>
 

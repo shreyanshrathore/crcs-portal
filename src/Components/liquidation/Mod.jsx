@@ -19,8 +19,8 @@ import FirstPageIcon from '@mui/icons-material/FirstPage';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import LastPageIcon from '@mui/icons-material/LastPage';
-import bank from'./module1.json'
 
+import datas from './module2.json'
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -198,27 +198,35 @@ export default function CustomPaginationActionsTable() {
       <TableBody>
       <TableRow>
           
-          <StyledTableCell>Name of Bank</StyledTableCell>
-          <StyledTableCell align="left" > Address</StyledTableCell>
-          <StyledTableCell align="right">State Name</StyledTableCell>
-          <StyledTableCell align="right">District Name</StyledTableCell>
+          <StyledTableCell>Name of the Society </StyledTableCell>
+          <StyledTableCell align="left" > State </StyledTableCell>
+          <StyledTableCell align="right">Name Of Liquidator</StyledTableCell>
+          <StyledTableCell align="right">Appointment Date</StyledTableCell>
+          <StyledTableCell align="right">Liquidation date</StyledTableCell>
+          <StyledTableCell align="right">Status</StyledTableCell> 
         </TableRow>
         {(rowsPerPage > 0
-          ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-          : rows
+          ? datas.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+          : datas
         ).map((row) => (
-          <TableRow key={row.BankName}>
-              <TableCell component="th" scope="row">
-              {row.BankName}
+          <TableRow key={row.SNO}>
+            <TableCell style={{ width: 460 }} scope="row" >
+              {row['S NO']} {row['Name of Society']}
             </TableCell>
-            <TableCell component="th" scope="row" >
-              {row.Address}
+            <TableCell style={{ width: 120 }} align="left">
+              {row.State}
             </TableCell>
-            <TableCell style={{ width: 160 }} align="right">
-              {row.StateName}
+            <TableCell style={{ width: 260 }} align="right">
+              {row['Name Of Liquidator']}
             </TableCell>
-            <TableCell style={{ width: 160 }} align="right">
-              {row.DistrictName}
+              <TableCell style={{ width: 120 }} scope="row" align='right'>
+                {row['Date of Appointment Order']}
+            </TableCell>
+            <TableCell style={{ width: 120 }} scope="row" align='right'>
+                {row['Liquidation Validity Date']}
+            </TableCell>
+            <TableCell style={{ width: 120 }} scope="row" align='right'>
+                {row['Status']}
             </TableCell>
           </TableRow>
         ))}
@@ -233,7 +241,7 @@ export default function CustomPaginationActionsTable() {
           <TablePagination
             rowsPerPageOptions={[5, 10, 25, { label: 'All', value: -1 }]}
             colSpan={3}
-            count={rows.length}
+            count={datas.length}
             rowsPerPage={rowsPerPage}
             page={page}
             SelectProps={{
