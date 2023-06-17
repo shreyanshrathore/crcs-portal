@@ -9,7 +9,8 @@ import Data from './Components/Chartss/Map_data'
 import Register from './Pages/Register'
 import Login from './Pages/Login'
 import Rem from './Pages/rem'
-import Bank from'./Components/ListOfBank'
+import Bank from './Components/ListOfBank'
+import Mod from './Components/liquidation/Mods'
 
 function App() {
 
@@ -36,8 +37,8 @@ function App() {
             path="/bank"
             element={
               <div>
-                <Nav/>
-                <Navi/>
+                <Nav />
+                <Navi />
                 <br />
                 <br />
                 <br />
@@ -53,6 +54,21 @@ function App() {
             element={
               <div>
                 <Login />
+              </div>
+            }
+          />
+
+          <Route
+            path="/Liquidation-pocess"
+            element={
+              <div>
+                <Nav/>
+                <Navi/> 
+                <br />
+                <br />
+                <br />
+                <br />
+                <Mod />
               </div>
             }
           />

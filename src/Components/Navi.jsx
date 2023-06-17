@@ -18,6 +18,10 @@ const Navi = () => {
         console.log("Maps");
         navigate('/bank');
       };
+      const goLiqIni = () => {
+        console.log("Maps");
+        navigate('/Liquidation-pocess');
+      };
     const goHome = () => {
         console.log("clicked");
         navigate('/home');
@@ -177,7 +181,7 @@ const Navi = () => {
 
                             </ListItem>
 
-                            <ListItem title="LIQUIDATION PROCESS INITIATED" >
+                            <ListItem title="LIQUIDATION PROCESS INITIATED" onClick = {goLiqIni}>
 
                             </ListItem>
                         </ul>
