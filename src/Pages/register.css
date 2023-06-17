@@ -1,0 +1,84 @@
+.formContainer .formWrapper form.forms {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* background-color: aqua; */
+  gap: 20px;
+}
+
+input{
+  width: 60px;
+  background-color: black;
+}
+
+.formContainer {
+  background-color: #a7bcff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer .formWrapper {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.formContainer .formWrapper .logo {
+  color: #5d5b8d;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.formContainer .formWrapper .title {
+  color: #5d5b8d;
+  font-size: 18px;
+}
+
+.formContainer .formWrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formContainer .formWrapper form input {
+  padding: 15px;
+  border: none;
+  width: 350px;
+  border-bottom: 1px solid #a7bcff;
+}
+
+.formContainer .formWrapper form button {
+  &:hover {
+    box-shadow: 0 0 5px 5px rgba(123, 150, 236, 0.5);
+  }
+  background-color: white;
+  color: blueviolet;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.formContainer .formWrapper form label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #8da4f1;
+  font-style: 12px;
+  cursor: pointer;
+}
+
+.formContainer .formWrapper form label img {
+  width: 32px;
+}
+
+.formContainer .formWrapper p {
+  color: #5d5b8d;
+  font-size: small;
+  margin-top: 10px;
+}

@@ -1,8 +1,14 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Nav from './Components/Nav';
+import Navi from './Components/Navi'
 import Function from './Components/FunctionComponent';
 import Maps from './Components/Chartss/Maps';
+import Charts from './Components/Chartss/Charts'
+import Data from './Components/Chartss/Map_data'
+import Register from './Pages/Register'
+import Login from './Pages/Login'
+import Rem from './Pages/rem'
 
 function App() {
 
@@ -15,13 +21,52 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Routes>
+        <Routes >
           <Route
-            path="/home"
+            path="/register"
+            element={
+              <div>
+                <Register />
+              </div>
+            }
+          />
+
+
+          <Route
+            path="/login"
+            element={
+              <div>
+                <Login />
+              </div>
+            }
+          />
+
+          <Route
+            path="/rem"
+            element={
+              <div>
+                <Rem />
+              </div>
+            }
+          />
+          <Route
+            path="/"
             element={
               <div>
                 <Nav />
-                <Function />
+                {/* <Function /> */}
+                <Navi />
+              </div>
+            }
+          />
+
+          <Route
+            path="/chart"
+            element={
+              <div>
+                <Nav />
+                <Navi />
+                <Charts/>
               </div>
             }
           />
@@ -30,8 +75,10 @@ function App() {
             element={
               <div>
                 <Nav />
-                <Function />
+                {/* <Function /> */}
+                <Navi />
                 <Maps />
+                {/* <Data/> */}
               </div>
             }
           />

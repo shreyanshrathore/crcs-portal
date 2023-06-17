@@ -1,13 +1,21 @@
 body {
     overflow: hidden;
   }
+  .map-container {
+    width: fit-content;
+    margin: 0 auto;
+    /* margin-left: 300px; */
+    margin-top: -540px;
+    gap: 30px;
+  }
   
   .map-container {
-    width: 1000px;
+    /* width: 100vh; */
     /* height: 700px; */
     /* margin: 0 auto; */
-    margin-top: -240px;
+    margin-top: -200px;
     overflow: hidden;
+    position: relative;
   }
   
   .map-container svg {
@@ -19,3 +27,11 @@ body {
     fill: yellow;
   }
   
+
+  .map-container {
+    display: grid;
+    margin-top: 3%;
+    width: 100%;
+    grid-template-columns: 1fr 2fr; /* Adjust column widths as needed */
+    gap: 10px; /* Adjust gap size between columns as needed */
+  } 

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ComposableMap, Geographies, Geography, ZoomableGroup } from 'react-simple-maps';
 import './Maps.css';
+import Map_data from './Map_data'
 
 const data = [
   { id: 'Himachal Pradesh', value: 1 },
@@ -38,27 +39,27 @@ const data = [
   { id: 'meghalaya', value: 47 },
   { id: 'uttaranchal', value: 47 },
   { id: 'Andaman and Nicobar', value: 47 },
-
-
 ];
 
 const IndiaMap = () => {
+  const [datas, setData] = useState(0);
+  const [state, setState] = useState("");
   return (
     <div className="map-container">
       <ComposableMap
         // data-tip=""
-        projectionConfig={{ scale: 700 }} 
+        projectionConfig={{ scale: 650 }}
         width={700}
         height={700}
         style={{ margin: '0 auto' }}
         className='Composable-Map'
       >
-        <ZoomableGroup center={[82, 23]} zoom={1} disablePanning>
+        <ZoomableGroup center={[85, 21]} zoom={2} disablePanning>
           <Geographies geography={INDIA_TOPO_JSON}>
             {({ geographies }) =>
               geographies.map((geo) => {
                 const { NAME_1 } = geo.properties;
-                const stateData = data.find((d) =>  d.id.toLowerCase() === NAME_1.toLowerCase());
+                const stateData = data.find((d) => d.id.toLowerCase() === NAME_1.toLowerCase());
 
                 return (
                   <Geography
@@ -67,7 +68,9 @@ const IndiaMap = () => {
                     fill={stateData ? getColor(stateData.value) : 'black'}
                     onMouseEnter={() => {
                       console.log('State:', NAME_1);
-                      console.log('Value:', stateData?.value);
+                      console.log('Value:', stateData.value);
+                      setData(stateData.value);
+                      setState(NAME_1);
                     }}
                     onMouseLeave={() => {
                       console.log('Mouse left:', NAME_1);
@@ -84,9 +87,8 @@ const IndiaMap = () => {
           </Geographies>
         </ZoomableGroup>
       </ComposableMap>
-      <div>
-        
-      </div>
+      {console.log(datas)}
+      <Map_data data={{ name: state, val: datas }} />
     </div>
   );
 };
