@@ -23,7 +23,7 @@ function App() {
       <div className="App">
         <Routes >
           <Route
-            path="/register"
+            path="/"
             element={
               <div>
                 <Register />
@@ -50,7 +50,7 @@ function App() {
             }
           />
           <Route
-            path="/"
+            path="/home"
             element={
               <div>
                 <Nav />
