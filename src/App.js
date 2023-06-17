@@ -9,6 +9,7 @@ import Data from './Components/Chartss/Map_data'
 import Register from './Pages/Register'
 import Login from './Pages/Login'
 import Rem from './Pages/rem'
+import Bank from'./Components/ListOfBank'
 
 function App() {
 
@@ -27,6 +28,21 @@ function App() {
             element={
               <div>
                 <Register />
+              </div>
+            }
+          />
+
+          <Route
+            path="/bank"
+            element={
+              <div>
+                <Nav/>
+                <Navi/>
+                <br />
+                <br />
+                <br />
+                <br />
+                <Bank />
               </div>
             }
           />
@@ -66,7 +82,7 @@ function App() {
               <div>
                 <Nav />
                 <Navi />
-                <Charts/>
+                <Charts />
               </div>
             }
           />

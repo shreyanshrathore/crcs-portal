@@ -13,6 +13,11 @@ const Navi = () => {
         console.log("Maps");
         navigate('/maps');
       };
+
+      const goBank = () => {
+        console.log("Maps");
+        navigate('/bank');
+      };
     const goHome = () => {
         console.log("clicked");
         navigate('/home');
@@ -37,7 +42,7 @@ const Navi = () => {
                         <ul className="List one">
                             <li style={{ gridRow: 'span 3' }}>
                                 <NavigationMenu.Link asChild>
-                                    <a className="Callout" href="/">
+                                    <a className="Callout" >
                                         <svg aria-hidden width="38" height="38" viewBox="0 0 25 25" fill="white">
                                             <path d="M12 25C7.58173 25 4 21.4183 4 17C4 12.5817 7.58173 9 12 9V25Z"></path>
                                             <path d="M12 0H4V8H12V0Z"></path>
@@ -55,7 +60,7 @@ const Navi = () => {
                             <ListItem onClick = {goCharts} title="YEAR WISE">
                                 YEAR WISE DATA
                             </ListItem>
-                            <ListItem href="https://icons.radix-ui.com/" title="TYPE WISE">
+                            <ListItem  title="TYPE WISE">
                                 According to different types
                             </ListItem>
                         </ul>
@@ -74,19 +79,19 @@ const Navi = () => {
                     </NavigationMenu.Trigger>
                     <NavigationMenu.Content className="NavigationMenuContent">
                         <ul className="List two">
-                            <ListItem title="Introduction" href="/docs/primitives/overview/introduction">
+                            <ListItem title="Introduction" >
                                 State-wise List
                             </ListItem>
-                            <ListItem title="ALL Registration Societies" href="/docs/primitives/overview/getting-started">
+                            <ListItem title="ALL Registration Societies" >
                                 PDF
                             </ListItem>
-                            <ListItem title="SOCIETIES REGISTERED " href="/docs/primitives/guides/styling">
+                            <ListItem title="SOCIETIES REGISTERED " >
                                 BEFORE 1986
                             </ListItem>
-                            <ListItem title="CALENDAR YEAR-WISE LIST " href="/docs/primitives/guides/styling">
+                            <ListItem title="CALENDAR YEAR-WISE LIST " >
                                 
                             </ListItem>
-                            <ListItem title="FINANCIAL YEAR_WISE LIST " href="/docs/primitives/guides/styling">
+                            <ListItem title="FINANCIAL YEAR_WISE LIST " >
 
                             </ListItem>
 
@@ -103,19 +108,19 @@ const Navi = () => {
                     </NavigationMenu.Trigger>
                     <NavigationMenu.Content className="NavigationMenuContent">
                         <ul className="List two">
-                            <ListItem title="FORM I" href="/docs/primitives/overview/introduction">
+                            <ListItem title="FORM I" >
                                 Build high-quality, accessible design systems and web apps.
                             </ListItem>
-                            <ListItem title="FORM II" href="/docs/primitives/overview/getting-started">
+                            <ListItem title="FORM II" >
                                 A quick tutorial to get you up and running with Radix Primitives.
                             </ListItem>
-                            <ListItem title="FORM III" href="/docs/primitives/guides/styling">
+                            <ListItem title="FORM III" >
                                 Unstyled and compatible with any styling solution.
                             </ListItem>
-                            <ListItem title="FORM IV" href="/docs/primitives/guides/animation">
+                            <ListItem title="FORM IV" >
                                 Use CSS keyframes or any animation library of your choice.
                             </ListItem>
-                            <ListItem title="FORM V" href="/docs/primitives/overview/accessibility">
+                            <ListItem title="FORM V" >
                                 Tested in a range of browsers and assistive technologies.
                             </ListItem>
                         </ul>
@@ -134,19 +139,19 @@ const Navi = () => {
                     </NavigationMenu.Trigger>
                     <NavigationMenu.Content className="NavigationMenuContent">
                         <ul className="List two">
-                            <ListItem title="MSCS ACT" href="/docs/primitives/overview/introduction">
+                            <ListItem title="MSCS ACT" >
                                 2002
                             </ListItem>
-                            <ListItem title="MSCS RULES" href="/docs/primitives/overview/getting-started">
+                            <ListItem title="MSCS RULES" >
                                 2002
                             </ListItem>
-                            <ListItem title="CHECK LIST" href="/docs/primitives/guides/styling">
+                            <ListItem title="CHECK LIST" >
 
                             </ListItem>
-                            <ListItem title="MODEL BYE-LAWS" href="/docs/primitives/guides/animation">
+                            <ListItem title="MODEL BYE-LAWS" >
                                 
                             </ListItem>
-                            <ListItem title="NATIONAL POLICY ON COOPERATIVE" href="/docs/primitives/overview/accessibility">
+                            <ListItem title="NATIONAL POLICY ON COOPERATIVE" >
                                 2002
                             </ListItem>
                         </ul>
@@ -162,18 +167,17 @@ const Navi = () => {
                     </NavigationMenu.Trigger>
                     <NavigationMenu.Content className="NavigationMenuContent">
                         <ul className="List one">
-                            <ListItem title="RECEIVED APPLICATION" href="/docs/primitives/overview/introduction">
-                                
+                            <ListItem title="RECEIVED APPLICATION" >                               
                             </ListItem>
-                            <ListItem title="STATUS OF APPLICATION" href="/docs/primitives/overview/getting-started">
-
-                            </ListItem>
-
-                            <ListItem title="SOCITIES UNDER LIQUIDATION" href="/docs/primitives/overview/getting-started">
+                            <ListItem title="STATUS OF APPLICATION" >
 
                             </ListItem>
 
-                            <ListItem title="LIQUIDATION PROCESS INITIATED" href="/docs/primitives/overview/getting-started">
+                            <ListItem title="SOCITIES UNDER LIQUIDATION" >
+
+                            </ListItem>
+
+                            <ListItem title="LIQUIDATION PROCESS INITIATED" >
 
                             </ListItem>
                         </ul>
@@ -196,17 +200,17 @@ const Navi = () => {
                     </NavigationMenu.Trigger>
                     <NavigationMenu.Content className="NavigationMenuContent">
                         <ul className="List two">
-                            <ListItem title="ALL REG. SOCITIES" href="/docs/primitives/overview/introduction">
+                            <ListItem title="ALL REG. SOCITIES">
                                 
                             </ListItem>
-                            <ListItem title="ALL REGISTERED USER" href="/docs/primitives/overview/getting-started">
+                            <ListItem title="ALL REGISTERED USER">
                             </ListItem>
-                            <ListItem title="FILED ANNUAL RETURN ONLINE" href="/docs/primitives/guides/styling">
+                            <ListItem title="FILED ANNUAL RETURN ONLINE">
                             </ListItem>
-                            <ListItem title="ANNUAL RETURN: OFFINE" href="/docs/primitives/guides/animation">
+                            <ListItem title="ANNUAL RETURN: OFFINE">
                                 
                             </ListItem>
-                            <ListItem title="REMINDER MESSAGE" href="/docs/primitives/overview/accessibility">
+                            <ListItem title="REMINDER MESSAGE" >
                                 
                             </ListItem>
                         </ul>
@@ -220,7 +224,7 @@ const Navi = () => {
 
 
                 <NavigationMenu.Item>
-                    <NavigationMenu.Link className="NavigationMenuLink" href="https://github.com/radix-ui">
+                    <NavigationMenu.Link className="NavigationMenuLink" onClick={goBank} >
                         BANK
                     </NavigationMenu.Link>
                 </NavigationMenu.Item>
